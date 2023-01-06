@@ -63,7 +63,7 @@ body{
     width: 100%;
     display: flex;
     overflow-x: scroll;
-    background-color: blue;
+
 
 }
 #conteudo .prato{
@@ -85,7 +85,19 @@ body{
     margin-bottom: 17px;
     
 }
-
+ion-icon{
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+    color: #32B72F;
+    display: none;
+}
+.borda{
+    border: 3px solid #32B72F;
+}
 #conteudo .prato .caixa_prato{
     width: 172px;
     height: 216px;
@@ -94,10 +106,12 @@ body{
     display: flex;
     flex-direction: column;
     margin-right: 16px;
-    
+    position: relative;   
 }
+
 .caixa_prato div:first-child{
-   margin-left: 14px;
+   display: flex;
+   flex-direction: column;
 }
 
 
@@ -106,6 +120,7 @@ body{
     height: 87px;
     margin-top: 18px;
     margin-right: 14px;
+    margin-left: 10px;
 }
 .caixa_prato h1{
     width: 139px;
@@ -115,6 +130,7 @@ body{
     line-height: 19px;
     color: #333333;
     margin-top: 8px;
+    margin-left: 14px;
 }
 .caixa_prato h2{
     width: 147px;
@@ -124,6 +140,7 @@ body{
     line-height: 18px;
     color: #A6A6A6;
     margin-top: 4px;
+    margin-left: 14px;
 }
 .caixa_prato h3{
     width: 66px;
@@ -133,6 +150,7 @@ body{
     line-height: 19px;
     color: #000000;
     margin-top: 5px;
+    margin-left: 14px;
 }
 
 #conteudo .prato .caixa_bebida{
@@ -143,10 +161,12 @@ body{
     display: flex;
     flex-direction: column;
     margin-right: 16px;
+    position: relative;
     
 }
 .caixa_bebida div:first-child{
-   margin-left: 14px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -155,6 +175,7 @@ body{
     height: 87px;
     margin-top: 18px;
     margin-right: 14px;
+    margin-left: 12px;
 }
 .caixa_bebida h1{
     width: 139px;
@@ -164,6 +185,7 @@ body{
     line-height: 19px;
     color: #333333;
     margin-top: 7px;
+    margin-left: 14px;
 }
 .caixa_bebida h2{
     width: 147px;
@@ -173,6 +195,7 @@ body{
     line-height: 18px;
     color: #A6A6A6;
     margin-top: 4px;
+    margin-left: 14px;
 }
 .caixa_bebida h3{
     width: 66px;
@@ -182,6 +205,7 @@ body{
     line-height: 19px;
     color: #000000;
     margin-top: 9px;
+    margin-left: 14px;
 }
 
 #conteudo .prato .caixa_sobremesa{
@@ -192,10 +216,11 @@ body{
     display: flex;
     flex-direction: column;
     margin-right: 16px;
-    
+    position: relative;
 }
 .caixa_sobremesa div:first-child{
-   margin-left: 14px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -204,6 +229,7 @@ body{
     height: 87px;
     margin-top: 18px;
     margin-right: 14px;
+    margin-left: 10px;
 }
 .caixa_sobremesa h1{
     width: 139px;
@@ -213,6 +239,7 @@ body{
     line-height: 19px;
     color: #333333;
     margin-top: 8px;
+    margin-left: 14px;
 }
 .caixa_sobremesa h2{
     width: 147px;
@@ -222,6 +249,7 @@ body{
     line-height: 18px;
     color: #A6A6A6;
     margin-top: 4px;
+    margin-left: 14px;
 }
 .caixa_sobremesa h3{
     width: 66px;
@@ -231,10 +259,11 @@ body{
     line-height: 19px;
     color: #000000;
     margin-top: 9px;
+    margin-left: 14px;
 }
 
 #barra_inferior{
-    background-color: blueviolet;
+    background-color: white;
     position: fixed;
     bottom: 0;
     left: 0;
