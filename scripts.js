@@ -63,16 +63,8 @@ function SelecionarSobremesa(cliqueTres){
 }
 
 function HabilitarBotao(){
-    console.log(comida);
-    console.log(nomeComida);
-    console.log(bebida);
-    console.log(nomeBebida);
-    console.log(sobremesa);
-    console.log(nomeSobremesa);
-    if (comida !== undefined){
-        
+    if (comida !== undefined){        
         if (bebida !== undefined){
-
             if (sobremesa !== undefined){
                 const teste = document.querySelector(".botao");
                 teste.innerHTML = "Fechar pedido";
@@ -106,10 +98,8 @@ function Mensagem(){
     const precoTotal= (precoPratoFormatado+precoBebidaFormatado+precoSobremesaFormatado).toFixed(2);
 
 
-
     let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomeComida} \n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal}`;
-    //encodeURIComponent(mensagem);
-    console.log(mensagem);
+    mensagem = window.encodeURIComponent(mensagem);
     window.open(`https://wa.me/5537999791731?text=${mensagem}`);
 
 }
