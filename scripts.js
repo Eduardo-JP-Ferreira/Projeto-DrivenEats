@@ -1,3 +1,4 @@
+
 let nomeComida;
 let comida;
 function SelecionarPrato(cliqueUm){
@@ -83,13 +84,32 @@ function HabilitarBotao(){
 }
 
 function BotaoClicado(clicado){
-    alert("Clicou hahaha");
     Mensagem();
 }
 
 function Mensagem(){
-   
-    let mensagem = "Ola tio Phil";
-    encodeURIComponent(mensagem);
-    window.open("https://wa.me/55999999999?text=mensagem");
+    let precoPrato = document.querySelector('.prata .seleciona h4');
+    precoPrato = precoPrato.innerHTML;
+    precoPrato = precoPrato.replace(",",".")
+    let precoPratoFormatado = parseFloat(precoPrato);
+
+    let precoBebida = document.querySelector('.bebida .seleciona h4');
+    precoBebida = precoBebida.innerHTML;
+    precoBebida = precoBebida.replace(",",".")
+    let precoBebidaFormatado = parseFloat(precoBebida);
+
+    let precoSobremesa = document.querySelector('.sobremesa .seleciona h4');
+    precoSobremesa = precoSobremesa.innerHTML;
+    precoSobremesa = precoSobremesa.replace(",",".")
+    let precoSobremesaFormatado = parseFloat(precoSobremesa);
+
+    const precoTotal= (precoPratoFormatado+precoBebidaFormatado+precoSobremesaFormatado).toFixed(2);
+
+
+
+    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomeComida} \n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal}`;
+    //encodeURIComponent(mensagem);
+    console.log(mensagem);
+    window.open(`https://wa.me/5537999791731?text=${mensagem}`);
+
 }
