@@ -95,6 +95,19 @@ ion-icon{
     right: 11px;
     color: #32B72F;
 }
+
+.icone1{
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+    color: white;
+}
+.selecionado{
+    color: #32B72F;;
+}
 .none{
     display: none;
 }
@@ -299,4 +312,7 @@ ion-icon{
     vertical-align: 100%;
     color: white;
     border: none;
+}
+.verde{
+    background-color: green;
 }

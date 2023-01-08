@@ -22,12 +22,12 @@
                 <p class="primeiro">Primeiro, seu prato</p>
                 <div class="countainer_prato prata">
                     <div class="caixa_prato" onclick="SelecionarPrato(this)">
-                        <div>
+                        <div class="divi">
                             <div><img src="./img/frango.png"></div>                           
                             <h1>Frango Yin Yang</h1>
                             <h2>Um pouco de batata, um pouco de salada</h2>
                             <h3>R$ 14,90</h3>
-                            <ion-icon class="none" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="icone1" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
                     <div class="caixa_prato" onclick="SelecionarPrato(this)">
@@ -36,7 +36,7 @@
                             <h1>Frango Yin Yang</h1>
                             <h2>Um pouco de batata, um pouco de salada</h2>
                             <h3>R$ 14,90</h3>
-                            <ion-icon class="none" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="icone1" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
                     <div class="caixa_prato" onclick="SelecionarPrato(this)">
@@ -45,7 +45,8 @@
                             <h1>Frango Yin Yang</h1>
                             <h2>Um pouco de batata, um pouco de salada</h2>
                             <h3>R$ 14,90</h3>
-                            <ion-icon class="none" name="checkmark-circle"></ion-icon>
+                            <ion-icon class="icone none" name="checkmark-circle"></ion-icon>
+                            
                         </div>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
         </div>
         <div id="barra_inferior">
             <div>
-                <button class="botao">Selecione os 3 itens <br> para fechar o pedido</button>
+                <button disabled onclick="BotaoClicado(this)" id="botao_1" class="botao">Selecione os 3 itens <br> para fechar o pedido</button>
             </div>
         </div>
        
