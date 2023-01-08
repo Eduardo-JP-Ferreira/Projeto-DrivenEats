@@ -2,12 +2,12 @@ let IconeAnterior;
 let comida;
 function SelecionarPrato(cliqueUm){
 
-    const botaoselecUm = document.querySelector('.prata .borda');  //borda significa q foi selecionado
+    const botaoselecUm = document.querySelector('.prata .seleciona');  //borda significa q foi selecionado
  
     if (botaoselecUm !== null){
-        botaoselecUm.classList.remove('borda');        
+        botaoselecUm.classList.remove('seleciona');        
     }
-    cliqueUm.classList.add('borda');
+    cliqueUm.classList.add('seleciona');
     comida =1;
     HabilitarBotao();
 
