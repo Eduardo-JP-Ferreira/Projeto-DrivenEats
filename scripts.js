@@ -28,7 +28,7 @@ function SelecionarBebida(cliqueDois){
     const botaoselecDois = document.querySelector('.bebida .seleciona');
     if (botaoselecDois !== null){
         botaoselecDois.classList.remove('seleciona');
-    } 
+    }
 
     cliqueDois.classList.add('seleciona');
     const check = document.querySelector('.bebida .seleciona ion-icon');
@@ -84,10 +84,10 @@ function HabilitarBotao(){
 }
 
 function BotaoClicado(clicado){
-    MensagemFinal();
+    mensagemFinal();
 }
 
-function MensagemFinal(){
+function mensagemFinal(){
     let precoPrato = document.querySelector('.prata .seleciona h4');
     precoPrato = precoPrato.innerHTML;
     precoPrato = precoPrato.replace(",",".");
@@ -108,7 +108,8 @@ function MensagemFinal(){
     const nomeUsuario = prompt("Digite seu Nome:");
     const endereco = prompt("Digite seu Endereço:");
 
-    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomeComida} \n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal}\n\nNome: ${nomeUsuario}\nEndereço: ${endereco}`;
+    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomeComida} \n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal}\n
+Nome: ${nomeUsuario}\nEndereço: ${endereco}`;
     mensagem = window.encodeURIComponent(mensagem);
     window.open(`https://wa.me/55999999999?text=${mensagem}`);
 
