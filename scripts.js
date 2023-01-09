@@ -4,24 +4,23 @@ let comida;
 function SelecionarPrato(cliqueUm){
 
     const botaoselecUm = document.querySelector('.prata .seleciona');  //borda significa q foi selecionado
- 
+
     if (botaoselecUm !== null){
-        botaoselecUm.classList.remove('seleciona');        
+        botaoselecUm.classList.remove('seleciona');  
+           
     }
     cliqueUm.classList.add('seleciona');
+    const check = document.querySelector('.prata .seleciona ion-icon');
+    const check2 = document.querySelector('.prata .selecionado');
+    if (check2 !== null){
+        check2.classList.remove('selecionado');  
+           
+    }
+    check.classList.add('selecionado');
     const nome = document.querySelector('.prata .seleciona h1');
     nomeComida = nome.innerHTML;
     comida =1;
-    HabilitarBotao();
-
-    /*if (IconeAnterior !== undefined){
-        IconeUm.classList.remove('selecionado');
-        IconeAnterior = undefined;
-    }
-    
-    IconeUm.classList.add('selecionado');
-    IconeAnterior = 1;*/
-    
+    HabilitarBotao();  
 }
 let nomeBebida;
 let bebida;
@@ -30,20 +29,21 @@ function SelecionarBebida(cliqueDois){
     const botaoselecDois = document.querySelector('.bebida .seleciona');
     if (botaoselecDois !== null){
         botaoselecDois.classList.remove('seleciona');
-    }
-  
+    } 
+
     cliqueDois.classList.add('seleciona');
+    const check = document.querySelector('.bebida .seleciona ion-icon');
+    const check2 = document.querySelector('.bebida .selecionado');
+    if (check2 !== null){
+        check2.classList.remove('selecionado');  
+           
+    }
+    check.classList.add('selecionado');
+
     const nome = document.querySelector('.bebida .seleciona h1');
     nomeBebida = nome.innerHTML;
     bebida = 1;
     HabilitarBotao();
-  /*  const iconeUm = document.querySelector('.bebida .none');
-    if (iconeUm !== null){
-        iconeUm.classList.remove('none');  
-    }
-    else{
-        iconeUm.classList.remove('none'); 
-    }*/
 }
 let nomeSobremesa;
 let sobremesa;
@@ -55,6 +55,15 @@ function SelecionarSobremesa(cliqueTres){
     }
 
     cliqueTres.classList.add('seleciona');
+
+    const check = document.querySelector('.sobremesa .seleciona ion-icon');
+    const check2 = document.querySelector('.sobremesa .selecionado');
+    if (check2 !== null){
+        check2.classList.remove('selecionado');  
+           
+    }
+    check.classList.add('selecionado');
+
     const nome = document.querySelector('.sobremesa .seleciona h1');
     nomeSobremesa = nome.innerHTML;
     sobremesa=1;
