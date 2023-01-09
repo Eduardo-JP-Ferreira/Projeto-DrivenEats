@@ -6,21 +6,20 @@ function SelecionarPrato(cliqueUm){
     const botaoselecUm = document.querySelector('.prata .seleciona');  //borda significa q foi selecionado
 
     if (botaoselecUm !== null){
-        botaoselecUm.classList.remove('seleciona');  
-           
+        botaoselecUm.classList.remove('seleciona');
     }
     cliqueUm.classList.add('seleciona');
     const check = document.querySelector('.prata .seleciona ion-icon');
     const check2 = document.querySelector('.prata .selecionado');
     if (check2 !== null){
-        check2.classList.remove('selecionado');  
+        check2.classList.remove('selecionado');
            
     }
     check.classList.add('selecionado');
     const nome = document.querySelector('.prata .seleciona h1');
     nomeComida = nome.innerHTML;
     comida =1;
-    HabilitarBotao();  
+    HabilitarBotao();
 }
 let nomeBebida;
 let bebida;
@@ -35,7 +34,7 @@ function SelecionarBebida(cliqueDois){
     const check = document.querySelector('.bebida .seleciona ion-icon');
     const check2 = document.querySelector('.bebida .selecionado');
     if (check2 !== null){
-        check2.classList.remove('selecionado');  
+        check2.classList.remove('selecionado');
            
     }
     check.classList.add('selecionado');
@@ -59,7 +58,7 @@ function SelecionarSobremesa(cliqueTres){
     const check = document.querySelector('.sobremesa .seleciona ion-icon');
     const check2 = document.querySelector('.sobremesa .selecionado');
     if (check2 !== null){
-        check2.classList.remove('selecionado');  
+        check2.classList.remove('selecionado');
            
     }
     check.classList.add('selecionado');
@@ -68,7 +67,7 @@ function SelecionarSobremesa(cliqueTres){
     nomeSobremesa = nome.innerHTML;
     sobremesa=1;
     HabilitarBotao();
-   // cliqueTres.classList.remove('none');
+    
 }
 
 function HabilitarBotao(){
@@ -85,10 +84,10 @@ function HabilitarBotao(){
 }
 
 function BotaoClicado(clicado){
-    Mensagem();
+    MensagemFinal();
 }
 
-function Mensagem(){
+function MensagemFinal(){
     let precoPrato = document.querySelector('.prata .seleciona h4');
     precoPrato = precoPrato.innerHTML;
     precoPrato = precoPrato.replace(",",".");
@@ -103,11 +102,13 @@ function Mensagem(){
     precoSobremesa = precoSobremesa.innerHTML;
     precoSobremesa = precoSobremesa.replace(",",".");
     const precoSobremesaFormatado = parseFloat(precoSobremesa);
+    const fixed=2;
+    const precoTotal= (precoPratoFormatado+precoBebidaFormatado+precoSobremesaFormatado).toFixed(fixed);
 
-    const precoTotal= (precoPratoFormatado+precoBebidaFormatado+precoSobremesaFormatado).toFixed(2);
+    const nomeUsuario = prompt("Digite seu Nome:");
+    const endereco = prompt("Digite seu Endereço:");
 
-
-    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomeComida} \n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal}`;
+    let mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${nomeComida} \n- Bebida: ${nomeBebida}\n- Sobremesa: ${nomeSobremesa}\nTotal: R$ ${precoTotal}\n\nNome: ${nomeUsuario}\nEndereço: ${endereco}`;
     mensagem = window.encodeURIComponent(mensagem);
     window.open(`https://wa.me/55999999999?text=${mensagem}`);
 
