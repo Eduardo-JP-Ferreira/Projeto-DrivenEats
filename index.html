@@ -20,7 +20,7 @@
             <div class="prato">
                 <p class="primeiro">Primeiro, seu prato</p>
                 <div class="countainer_prato prata">
-                    <div data-test="dish" class="caixa_prato" onclick="SelecionarPrato(this)">
+                    <div data-test="dish" class="caixa_prato" onclick="selecionarPrato(this)">
                         <div class="divi">
                             <div><img src="./img/strogonoff.jpg" alt="Primeiro prato" ></div>                           
                             <h1 data-test="item-name">Strogonoff</h1>
@@ -32,7 +32,7 @@
                             <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                    <div data-test="dish" class="caixa_prato" onclick="SelecionarPrato(this)">
+                    <div data-test="dish" class="caixa_prato" onclick="selecionarPrato(this)">
                         <div>
                             <img src="./img/frango.png" alt="Segundo prato">
                             <h1 data-test="item-name">Frango Yin Yang</h1>
@@ -44,7 +44,7 @@
                             <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                    <div data-test="dish" class="caixa_prato" onclick="SelecionarPrato(this)">
+                    <div data-test="dish" class="caixa_prato" onclick="selecionarPrato(this)">
                         <div>
                             <img src="./img/parmegiana.jpg" alt="Terceiro prato">
                             <h1 data-test="item-name">Bife a Parmegiana</h1>
@@ -64,7 +64,7 @@
             <div class="prato">
                 <p>Agora, sua bebida</p>
                 <div class="countainer_prato bebida">
-                    <div data-test="drink" class="caixa_bebida" onclick="SelecionarBebida(this)">
+                    <div data-test="drink" class="caixa_bebida" onclick="selecionarBebida(this)">
                         <div>
                             <img src="./img/coca-cola.png" alt="Primeira bebida">
                             <h1 data-test="item-name">Coca-Cola</h1>
@@ -76,7 +76,7 @@
                             <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                    <div data-test="drink" class="caixa_bebida" onclick="SelecionarBebida(this)">
+                    <div data-test="drink" class="caixa_bebida" onclick="selecionarBebida(this)">
                         <div>
                             <img src="./img/guarana.jpg"alt="Segunda bebida">
                             <h1 data-test="item-name">Guaraná Antártica</h1>
@@ -88,7 +88,7 @@
                             <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                    <div data-test="drink" class="caixa_bebida" onclick="SelecionarBebida(this)">
+                    <div data-test="drink" class="caixa_bebida" onclick="selecionarBebida(this)">
                         <div>
                             <img src="./img/suco.jpg"alt="Terceira bebida">
                             <h1 data-test="item-name">Suco de Laranja</h1>
@@ -107,7 +107,7 @@
             <div class="prato">
                 <p>Por fim, sua sobremesa</p>
                 <div class="countainer_prato sobremesa" >
-                    <div data-test="dessert" class="caixa_sobremesa" onclick="SelecionarSobremesa(this)">
+                    <div data-test="dessert" class="caixa_sobremesa" onclick="selecionarSobremesa(this)">
                         <div>
                             <img src="./img/pudim.png" alt="Primeira sobremesa">
                             <h1 data-test="item-name">Pudim</h1>
@@ -119,7 +119,7 @@
                             <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                    <div data-test="dessert" class="caixa_sobremesa" onclick="SelecionarSobremesa(this)">
+                    <div data-test="dessert" class="caixa_sobremesa" onclick="selecionarSobremesa(this)">
                         <div>
                             <img src="./img/palha.jpg" alt="Segunda sobremesa">
                             <h1 data-test="item-name">Palha Italiana</h1>
@@ -131,7 +131,7 @@
                             <ion-icon class="icone" name="checkmark-circle"></ion-icon>
                         </div>
                     </div>
-                    <div data-test="dessert" class="caixa_sobremesa" onclick="SelecionarSobremesa(this)">
+                    <div data-test="dessert" class="caixa_sobremesa" onclick="selecionarSobremesa(this)">
                         <div>
                             <img src="./img/brigadeiro.jpg" alt="Terceira sobremesa">
                             <h1 data-test="item-name">Brigadeiro</h1>
@@ -149,7 +149,7 @@
         </div>
         <div id="barra_inferior">
             <div>
-                <button data-test="order-btn" disabled onclick="BotaoClicado(this)" id="botao_1" class="botao">Selecione os 3 itens <br> para fechar o pedido</button>
+                <button data-test="order-btn" disabled onclick="botaoClicado()" id="botao_1" class="botao">Selecione os 3 itens <br> para fechar o pedido</button>
             </div>
         </div>
        

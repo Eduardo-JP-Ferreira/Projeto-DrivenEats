@@ -1,9 +1,9 @@
 
 let nomeComida;
 let comida;
-function SelecionarPrato(cliqueUm){
+function selecionarPrato(cliqueUm){
 
-    const botaoselecUm = document.querySelector('.prata .seleciona');  //borda significa q foi selecionado
+    const botaoselecUm = document.querySelector('.prata .seleciona');
 
     if (botaoselecUm !== null){
         botaoselecUm.classList.remove('seleciona');
@@ -13,17 +13,17 @@ function SelecionarPrato(cliqueUm){
     const check2 = document.querySelector('.prata .selecionado');
     if (check2 !== null){
         check2.classList.remove('selecionado');
-           
     }
     check.classList.add('selecionado');
     const nome = document.querySelector('.prata .seleciona h1');
     nomeComida = nome.innerHTML;
     comida =1;
-    HabilitarBotao();
+    habilitarBotao();
 }
+
 let nomeBebida;
 let bebida;
-function SelecionarBebida(cliqueDois){
+function selecionarBebida(cliqueDois){
 
     const botaoselecDois = document.querySelector('.bebida .seleciona');
     if (botaoselecDois !== null){
@@ -35,18 +35,17 @@ function SelecionarBebida(cliqueDois){
     const check2 = document.querySelector('.bebida .selecionado');
     if (check2 !== null){
         check2.classList.remove('selecionado');
-           
     }
     check.classList.add('selecionado');
 
     const nome = document.querySelector('.bebida .seleciona h1');
     nomeBebida = nome.innerHTML;
     bebida = 1;
-    HabilitarBotao();
+    habilitarBotao();
 }
 let nomeSobremesa;
 let sobremesa;
-function SelecionarSobremesa(cliqueTres){
+function selecionarSobremesa(cliqueTres){
 
     const botaoselecTres = document.querySelector('.sobremesa .seleciona');
     if (botaoselecTres !== null){
@@ -59,31 +58,25 @@ function SelecionarSobremesa(cliqueTres){
     const check2 = document.querySelector('.sobremesa .selecionado');
     if (check2 !== null){
         check2.classList.remove('selecionado');
-           
     }
     check.classList.add('selecionado');
 
     const nome = document.querySelector('.sobremesa .seleciona h1');
     nomeSobremesa = nome.innerHTML;
     sobremesa=1;
-    HabilitarBotao();
-    
+    habilitarBotao();
 }
 
-function HabilitarBotao(){
-    if (comida !== undefined){
-        if (bebida !== undefined){
-            if (sobremesa !== undefined){
-                const teste = document.querySelector(".botao");
-                teste.innerHTML = "Fechar pedido";
-                teste.classList.add('verde');
-                document.getElementById("botao_1").removeAttribute("disabled");
-            }
-        }
+function habilitarBotao(){
+    if (comida !== undefined && bebida !== undefined && sobremesa !== undefined){
+        const teste = document.querySelector(".botao");
+        teste.innerHTML = "Fechar pedido";
+        teste.classList.add('verde');
+        document.getElementById("botao_1").removeAttribute("disabled");
     }
 }
 
-function BotaoClicado(clicado){
+function botaoClicado(){
     mensagemFinal();
 }
 
