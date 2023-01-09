@@ -222,6 +222,15 @@ h4{
     overflow: hidden;
     
 }
+#barra_inferior div{
+    align-items: center;
+    display: flex;
+    z-index: 2;
+
+}
+#barra_inferior h1{
+    color: red;
+}
 #topo{
     width: 414px;
     height: 92px;
@@ -316,13 +325,4 @@ h4{
     display: flex;
     z-index: 2;
    
-}
-#barra_inferior div{
-    align-items: center;
-    display: flex;
-    z-index: 2;
-
-}
-#barra_inferior h1{
-    color: red;
 }
